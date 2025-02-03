@@ -192,6 +192,10 @@ strong {
         height: auto;
     }
 
+    #kimPic {
+        margin-left: 2rem;
+    }
+
     #hiddenText p { font-size: 11px; }
 
     .attribution { 
