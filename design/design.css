@@ -1,0 +1,201 @@
+/* color variables */
+:root {
+    --Red:                     hsl(1, 90%, 64%);
+    --Blue:                    hsl(219, 85%, 26%);
+    --White:                   hsl(0, 0%, 100%);
+    --Very-Light-Grayish-Blue: hsl(210, 60%, 98%);
+    --Light-Grayish-Blue1:     hsl(211, 68%, 94%);
+    --Light-Grayish-Blue2:     hsl(205, 33%, 90%);
+    --Grayish-Blue:            hsl(219, 14%, 63%);
+    --Dark-Grayish-Blue:       hsl(219, 12%, 42%);
+    --Very-Dark-Blue:          hsl(224, 21%, 14%);
+}
+
+/* adding fonts */
+@font-face {
+    font-family: Jakarta;
+    src: url(../assets/fonts/static/PlusJakartaSans-Medium.ttf);
+}
+
+@font-face {
+    font-family: Jakarta-Bold;
+    src: url(../assets/fonts/static/PlusJakartaSans-ExtraBold.ttf);
+}
+
+/* font styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-size: 16px;
+    background-color: var(--Very-Light-Grayish-Blue);
+}
+
+h1 {
+    color: var(--Very-Dark-Blue);
+    font-family: Jakarta-Bold;
+}
+
+h2 {
+    cursor: pointer;
+}
+
+b {
+    color: var(--Very-Dark-Blue);
+    font-family: Jakarta-Bold;
+}
+
+strong {
+    color: var(--Blue);
+    font-family: Jakarta-Bold;
+}
+
+.msgUp, .msgDown {
+    margin-left: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.msgUp {
+    color: var(--Dark-Grayish-Blue);
+    cursor: pointer;
+}
+
+.msgDown {
+    color: var(--Grayish-Blue);
+}
+
+/* main container */
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 5rem;
+}
+
+.container {
+    background-color: var(--White);
+    border-radius: 15px;
+    width: 750px;
+    height: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    font-family: Jakarta;
+}
+
+.notification {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90%;
+    height: auto;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background-color: var(--Light-Grayish-Blue1);
+}
+
+.picture {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: 1rem;
+}
+
+#kimPic {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 12rem;
+    display: none;
+}
+
+#headerNumber {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+#number {
+    width: 30px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-Dark-Blue);
+    color: var(--White);  
+    font-weight: bold; 
+}
+
+.dot  {
+    width: 8px;
+    height: 8px;
+}
+
+#hiddenText {
+    width: 300px;
+    height: auto;
+    display: none;
+    background-color: var(--Very-Light-Grayish-Blue);
+    border-radius: 5px;
+}
+
+#hiddenText p {
+    color: var(--Grayish-Blue);
+    font-family: Jakarta;
+    font-size: 12px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/* dev informations */
+.attribution, .attribution a {
+    color: var(--Very-Dark-Blue);
+    font-size: 13px;
+    font-family: Jakarta-Bold;
+    margin-top: 3rem;
+}
+
+.attribution a {
+    transition: color 0.3s ease;
+}
+
+.attribution a:hover {
+    color: var(--Grayish-Blue);
+}
+
+@media (min-width: 350px) and (max-width: 750px) {
+    
+    
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 100%; 
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #hiddenText {
+        width: auto;
+        height: auto;
+    }
+
+    #hiddenText p { font-size: 11px; }
+
+    .attribution { 
+        text-align: center;
+        font-size: 12px; }
+
+}
